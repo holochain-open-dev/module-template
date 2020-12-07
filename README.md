@@ -43,7 +43,7 @@ See our [`storybook`](https://holochain-open-dev.github.io/calendar-events-zome)
 These are the things you need to know to decide if you can use this module in your happ:
 
 - Zome:
-  - Optional dependency with the [resource-bookings-zome](https://github/holochain-open-dev/resource-bookings-zome).
+  - Optional dependency with the [resource-bookings-zome](https://github.com/holochain-open-dev/resource-bookings-module).
 - UI module:
   - `ApolloClient` as the state-management and data-fetching engine.
   - The resolvers are declared in the frontend using [`makeExecutableSchema`](https://www.npmjs.com/package/@graphql-tools/schema).
