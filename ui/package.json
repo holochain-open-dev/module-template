@@ -7,11 +7,11 @@
   "main": "dist/index.js",
   "module": "dist/index.js",
   "scripts": {
-    "start": "concurrently --kill-others \"npm:start-ui\" \"npm:start-holochain\"",
+    "start": "npm run build && concurrently --kill-others \"npm:start-ui\" \"npm:start-holochain\"",
     "start-ui": "CONDUCTOR_URL=ws://localhost:8888 concurrently -k --names tsc,dev-server \"npm run build-watch\" \"web-dev-server --config demo/web-dev-server.config.mjs\"",
     "start-holochain": "RUST_LOG=warn hc s generate -r=8888 ../zome/workdir/happ/sample-happ.happ network -b https://bootstrap-staging.holo.host quic",
     "build": "rimraf dist && rollup -c rollup.config.js",
-    "build-watch": "rimraf dist && rollup -c rollup.config.js -w",
+    "build-watch": "rollup -c rollup.config.js -w",
     "test": "tsc && web-test-runner --coverage --puppeteer",
     "test-debug": "tsc && DEBUG=true web-test-runner --coverage --puppeteer",
     "test-watch": "web-test-runner --watch --puppeteer",

@@ -18,6 +18,6 @@ export default [
       : 'undefined',
   }),
   builtins(),
-  commonjs()
+  commonjs(),
   globals(),
 ];
