@@ -26,8 +26,8 @@
   },
   "dependencies": {
     "@holochain-open-dev/context": "git+https://github.com/holochain-open-dev/context.git#ui-build",
-    "@holochain-open-dev/core-types": "git+https://github.com/holochain-open-dev/core-types.git#build",
-    "@holochain/conductor-api": "0.0.4",
+    "@holochain-open-dev/core-types": "0.1.1",
+    "@holochain/conductor-api": "0.2.0",
     "@open-wc/scoped-elements": "^2.0.0-next.4",
     "lit": "^2.0.0-rc.2"
   },
